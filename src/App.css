@@ -1,0 +1,616 @@
+.app-shell {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  min-height: 100vh;
+  background-color: #f4f7fb;
+  color: #0f172a;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.sidebar {
+  background-color: #0f172a;
+  color: #e2e8f0;
+  padding: 24px 16px;
+}
+
+.brand {
+  margin: 0 0 20px;
+  font-size: 20px;
+}
+
+.sidebar-nav {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+}
+
+.nav-item {
+  border: 0;
+  background: transparent;
+  color: #cbd5e1;
+  text-align: left;
+  padding: 10px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.nav-item:hover {
+  background-color: #1e293b;
+  color: #ffffff;
+  transform: translateX(2px);
+}
+
+.nav-item.active {
+  background-color: #1e293b;
+  color: #ffffff;
+}
+
+.main-content {
+  padding: 24px;
+  min-width: 0;
+}
+
+.main-header {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.main-header h1 {
+  margin: 0;
+  font-size: 28px;
+  color: #0f172a;
+}
+
+.header-subtitle {
+  margin: 4px 0 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.theme-toggle {
+  border: 1px solid #dbe3ee;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #334155;
+  font-size: 13px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.theme-toggle:hover {
+  border-color: #93c5fd;
+  color: #1d4ed8;
+}
+
+.dashboard-layout {
+  display: grid;
+  gap: 18px;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.summary-card,
+.panel {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.summary-card:hover,
+.panel:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.06);
+  border-color: #d4deea;
+}
+
+.summary-title {
+  margin: 0 0 8px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.summary-value {
+  margin: 0;
+  color: #0f172a;
+  font-size: 24px;
+}
+
+.panel h2 {
+  margin: 0 0 14px;
+  color: #0f172a;
+  font-size: 18px;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.placeholder-box {
+  min-height: 120px;
+  border: 1px dashed #cbd5e1;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  color: #64748b;
+  background-color: #f8fafc;
+}
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.chart-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 12px;
+  background-color: #ffffff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.chart-card:hover {
+  border-color: #cfd9e6;
+  box-shadow: 0 8px 16px rgba(15, 23, 42, 0.06);
+}
+
+.chart-card h3 {
+  margin: 0 0 10px;
+  color: #334155;
+  font-size: 15px;
+}
+
+.chart-box {
+  width: 100%;
+  height: 280px;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+.table-controls {
+  display: grid;
+  grid-template-columns: 1.5fr repeat(3, minmax(140px, 1fr));
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.table-control-input,
+.table-control-select {
+  border: 1px solid #dbe3ee;
+  border-radius: 8px;
+  padding: 9px 10px;
+  font-size: 14px;
+  color: #334155;
+  background-color: #ffffff;
+}
+
+.table-control-input:focus,
+.table-control-select:focus {
+  outline: 2px solid #bfdbfe;
+  outline-offset: 0;
+}
+
+.table-control-input:hover,
+.table-control-select:hover {
+  border-color: #c6d3e5;
+}
+
+.transaction-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.transaction-table th,
+.transaction-table td {
+  padding: 10px 8px;
+  border-bottom: 1px solid #eef2f7;
+  color: #334155;
+  font-size: 14px;
+}
+
+.transaction-table tbody tr:hover td {
+  background-color: #f8fbff;
+}
+
+.transaction-table th {
+  color: #64748b;
+  font-weight: 600;
+  text-align: left;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.empty-state {
+  text-align: center;
+  color: #64748b;
+  padding: 18px 8px;
+}
+
+.role-switcher {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: #334155;
+  font-size: 14px;
+}
+
+.role-select {
+  border: 1px solid #dbe3ee;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 14px;
+  color: #334155;
+  background-color: #ffffff;
+}
+
+.btn-primary,
+.btn-secondary {
+  border: 0;
+  border-radius: 8px;
+  padding: 9px 14px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  transform: translateY(-1px);
+  filter: brightness(0.98);
+}
+
+.btn-primary {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+.btn-secondary {
+  background-color: #e2e8f0;
+  color: #334155;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(15, 23, 42, 0.45);
+  display: grid;
+  place-items: center;
+  z-index: 50;
+  padding: 16px;
+}
+
+.modal-card {
+  width: min(420px, 100%);
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  padding: 16px;
+}
+
+.modal-card h3 {
+  margin: 0 0 12px;
+  color: #0f172a;
+}
+
+.modal-form {
+  display: grid;
+  gap: 10px;
+}
+
+.modal-form label {
+  display: grid;
+  gap: 6px;
+  color: #334155;
+  font-size: 14px;
+}
+
+.modal-form input,
+.modal-form select {
+  border: 1px solid #dbe3ee;
+  border-radius: 8px;
+  padding: 9px 10px;
+  font-size: 14px;
+}
+
+.modal-form input:focus,
+.modal-form select:focus,
+.role-select:focus {
+  outline: 2px solid #bfdbfe;
+  border-color: #93c5fd;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.empty-visual-state {
+  height: 100%;
+  display: grid;
+  place-items: center;
+  color: #64748b;
+  background: #f8fafc;
+  border: 1px dashed #dbe3ee;
+  border-radius: 10px;
+}
+
+.empty-state-card {
+  padding: 22px 12px;
+  text-align: center;
+}
+
+.empty-state-title {
+  margin: 0 0 4px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.empty-state-subtitle {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.insight-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.insight-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 14px;
+  background: #ffffff;
+}
+
+.insight-label {
+  margin: 0 0 6px;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.insight-value {
+  margin: 0;
+  color: #1e293b;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.table-row-skeleton {
+  width: 100%;
+  height: 14px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #eef3f8, #e2e8f0, #eef3f8);
+  background-size: 200% 100%;
+  animation: shimmer 1.2s linear infinite;
+}
+
+.skeleton {
+  min-height: 96px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #eef3f8, #e2e8f0, #eef3f8);
+  background-size: 200% 100%;
+  animation: shimmer 1.2s linear infinite;
+}
+
+.chart-skeleton {
+  min-height: 280px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+body.theme-dark {
+  background-color: #020617;
+}
+
+body.theme-dark .app-shell {
+  background-color: #0b1220;
+  color: #e2e8f0;
+}
+
+body.theme-dark .main-header h1,
+body.theme-dark .summary-value,
+body.theme-dark .panel h2,
+body.theme-dark .chart-card h3,
+body.theme-dark .empty-state-title {
+  color: #e2e8f0;
+}
+
+body.theme-dark .summary-title,
+body.theme-dark .transaction-table th,
+body.theme-dark .empty-state-subtitle,
+body.theme-dark .header-subtitle {
+  color: #94a3b8;
+}
+
+body.theme-dark .summary-card,
+body.theme-dark .panel,
+body.theme-dark .chart-card,
+body.theme-dark .insight-card,
+body.theme-dark .modal-card,
+body.theme-dark .theme-toggle,
+body.theme-dark .table-control-input,
+body.theme-dark .table-control-select,
+body.theme-dark .role-select,
+body.theme-dark .modal-form input,
+body.theme-dark .modal-form select {
+  background-color: #111827;
+  border-color: #1f2937;
+  color: #e2e8f0;
+}
+
+body.theme-dark .transaction-table td {
+  color: #cbd5e1;
+  border-bottom-color: #1f2937;
+}
+
+body.theme-dark .transaction-table tbody tr:hover td {
+  background-color: #0f172a;
+}
+
+body.theme-dark .empty-visual-state {
+  background: #0f172a;
+  border-color: #1f2937;
+  color: #94a3b8;
+}
+
+body.theme-dark .insight-value {
+  color: #e2e8f0;
+}
+
+@media (max-width: 1200px) {
+  .summary-grid,
+  .insight-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1024px) {
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .table-controls {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .header-actions {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 900px) {
+  .app-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .brand {
+    margin: 0;
+    font-size: 18px;
+  }
+
+  .sidebar-nav {
+    flex-direction: row;
+    gap: 6px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .sidebar-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-item {
+    white-space: nowrap;
+    padding: 8px 10px;
+  }
+
+  .nav-item:hover {
+    transform: none;
+  }
+
+  .main-header,
+  .panel-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .main-content {
+    padding: 18px;
+  }
+
+  .table-controls {
+    grid-template-columns: 1fr;
+  }
+
+  .summary-grid,
+  .insight-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .main-header h1 {
+    font-size: 24px;
+  }
+
+  .chart-box {
+    height: 230px;
+  }
+
+  .summary-card,
+  .panel,
+  .insight-card {
+    padding: 12px;
+  }
+
+  .transaction-table th,
+  .transaction-table td {
+    font-size: 13px;
+    padding: 9px 6px;
+  }
+
+  .modal-overlay {
+    padding: 10px;
+  }
+
+  .modal-card {
+    width: 100%;
+    padding: 12px;
+  }
+}
